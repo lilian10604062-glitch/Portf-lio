@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Meus Projetos</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    header {
+      border-bottom: none !important;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .project {
+      width: 100%;
+      max-width: 450px;
+      background: white;
+      border: 2px solid #c5dfff;
+      border-radius: 15px;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .acai-cover {
+      height: 180px;
+      background: linear-gradient(135deg, #27083e, #7626a0, #bd79df);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .project-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .project-actions a {
+      background: #0b2945;
+      color: white;
+      padding: 11px 17px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-actions .secondary {
+      background: #78b5f5;
+      color: #09243d;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">
+      Meu<span>Portfólio</span>
+    </a>
+
+    <div>
+      <a href="index.html">Início</a>
+      <a href="quemsoueu.html">Quem sou eu</a>
+      <a href="portfolio.html">Portfólio</a>
+    </div>
+
+    <div>
+      <a href="dashboard.html">
+        🔔 <span class="badge" id="badgeMsg">0</span>
+      </a>
+
+      <a class="lock" href="login.html">
+        🔒
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <h1>Meus Projetos</h1>
+  <p>Aqui estão os projetos que eu mesma criei.
+    tenho outras lojas mas tenho q revisar todos eles para posta aq no meu projeto para voces ver.
+  </p>
+
+  <div class="grid">
+
+    <article class="project">
+
+      <div class="acai-cover">
+        AÇAYTERIA DA LILY
+      </div>
+
+      <h2>Açayteria Da Lily</h2>
+
+      <p>
+        Loja virtual de açaí, sorvetes e vitaminas.
+        Possui cardápio de produtos, páginas separadas,
+        identidade visual própria e informações para contato.
+      </p>
+
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+
+      <div class="project-actions">
+        <a href="https://acai-chi-orcin.vercel.app/"
+           target="_blank" rel="noopener noreferrer">
+          Ver projeto
+        </a>
+
+        <a class="secondary"
+           href="https://github.com/lilian10604062-glitch/acai"
+           target="_blank" rel="noopener noreferrer">
+          Ver código
+        </a>
+      </div>
+
+    </article>
+
+  </div>
+</main>
+
+<script src="login.js"></script>
+
+</body>
+</html>

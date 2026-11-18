@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Área Restrita</title>
+<meta name="description" content="Dashboard para cadastrar projetos e ver mensagens recebidas.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><nav>
+    <button id="btnSair" class="btn btn-sair" type="button">
+  Sair
+</button>
+<a class="logo" href="index.html">Meu<span>Portfólio</span></a>
+<div><a href="index.html">Início</a><a href="quemsoueu.html">Quem sou eu</a><a href="portfolio.html">Portfólio</a></div>
+<div><a href="dashboard.html">🔔 <span class="badge" id="badgeMsg">0</span></a> <a class="lock" href="login.html" aria-label="Entrar na área restrita">🔒</a></div>
+</nav></header>
+<main>
+<h1>Dashboard - Área Restrita</h1>
+<section class="card"><h2>Cadastrar novo projeto</h2>
+<form id="formProjeto"><label for="titulo">Título</label><input id="titulo" required>
+<label for="descProj">Descrição</label><textarea id="descProj" rows="3" required></textarea>
+<label for="linkProj">Link do projeto</label><input id="linkProj" placeholder="https://...">
+<button class="btn" type="submit">Publicar no Portfólio</button><p id="okProj"></p></form></section>
+
+<section class="card"><h2>Mensagens Recebidas <span id="contNaoLidas"></span></h2>
+<div><button class="btn btn-light" onclick="filtrarMsg('todas')">Todas</button> <button class="btn btn-light" onclick="filtrarMsg('nao-lidas')">Não lidas</button> <button class="btn btn-light" onclick="filtrarMsg('lidas')">Lidas</button> <button class="btn" onclick="marcarTodas()">Marcar todas como lidas</button> <button class="btn" onclick="apagarLidas()">Apagar lidas</button></div>
+<div id="listaMsg"></div></section>
+</main>
+<footer><p>Meu Portfólio • Estudante EMTI</p></footer>
+<script>
+document.getElementById("btnSair").addEventListener("click", function () {
+  localStorage.removeItem("logado");
+  localStorage.removeItem("supabase_session");
+  window.location.href = "login.html";
+});
+</script>
+<script src="login.js"></script>
+</body>
+</html>

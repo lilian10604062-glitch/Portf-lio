@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Área Restrita</title>
+<meta name="description" content="Login simulado para acessar o dashboard.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><nav>
+<a class="logo" href="index.html">Meu<span>Portfólio</span></a>
+<div><a href="index.html">Início</a><a href="quemsoueu.html">Quem sou eu</a><a href="portfolio.html">Portfólio</a></div>
+<div><a href="dashboard.html">🔔 <span class="badge" id="badgeMsg">0</span></a> <a class="lock" href="login.html" aria-label="Entrar na área restrita">🔒</a></div>
+</nav></header>
+<main>
+<h1>Entrar na área restrita</h1>
+<section class="card">
+    <p>Entre com seu e-mail e sua senha cadastrados.</p>
+
+    <form id="formLogin">
+        <label for="usuario">E-mail</label>
+        <input id="usuario" type="email"
+               placeholder="Digite seu e-mail" required>
+
+        <label for="senha">Senha</label>
+        <input id="senha" type="password"
+               placeholder="Digite sua senha" required>
+
+        <button class="btn" id="btnEntrar" type="submit">
+            Entrar
+        </button>
+
+        <p id="erroLogin" style="color:red"></p>
+    </form>
+</section>
+<footer><p>Meu Portfólio • Estudante EMTI</p></footer>
+<script src="login.js"></script>
+</body>
+</html>
